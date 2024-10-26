@@ -1,0 +1,46 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打砖块游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #controls {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <label for="difficulty">选择难度:</label>
+      <select id="difficulty">
+          <option value="easy">简单</option>
+          <option value="medium">中等</option>
+          <option value="hard">困难</option>
+      </select>
+      <button id="startButton">开始游戏</button>
+      <select id="backgroundSelect">
+          <option value="0">夜空</option>
+          <option value="1">沙漠</option>
+      </select>
+      <label for="hideBricks">
+          <input type="checkbox" id="hideBricks"> 隐藏磚塊
+      </label>
+      <label for="brickImageCheckbox">
+        <input type="checkbox" id="brickImageCheckbox"> 使用自定义砖块图片
+      </label>
+  </div>  
+    <button id="restartButton" style="display: none;">重新開始本關</button> <!-- 新增重啟關卡按鈕 -->
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+    <script src="game.js"></script>
+  </body>
+  </html>
